@@ -5,7 +5,7 @@ const carsByMake = [['f150'], ['camaro'], ['corolla']];
 
 //Help with type inference
 
-const car = carMakers[0];
+const carOne = carMakers[0];
 const myCar = carMakers.pop();
 
 //prvent incompatible values
