@@ -5,7 +5,7 @@ export class Company {
   companyPhrase: string;
   location: {
     lat: number;
-    long: number;
+    lng: number;
   };
 
   constructor() {
@@ -13,7 +13,7 @@ export class Company {
     this.companyPhrase = faker.company.catchPhrase();
     this.location = {
       lat: parseFloat(faker.address.latitude()),
-      long: parseFloat(faker.address.longitude()),
+      lng: parseFloat(faker.address.longitude()),
     };
   }
 }
