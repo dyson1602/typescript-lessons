@@ -4,6 +4,7 @@ interface Mappable {
     lat: number;
     lng: number;
   };
+  markerContent(): string;
 }
 
 export class CustomMap {
@@ -30,10 +31,10 @@ export class CustomMap {
 
     marker.addListener('click', () => {
       const infowindow = new google.maps.InfoWindow({
-        content: 'Hi there'
-      })
+        content: mappable.markerContent(),
+      });
 
-      infowindow.open(this.googleMap, marker)
-    })
+      infowindow.open(this.googleMap, marker);
+    });
   }
 }
